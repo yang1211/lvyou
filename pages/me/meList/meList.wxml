@@ -1,0 +1,13 @@
+<!--pages/me/meList/meList.wxml-->
+<text class='whole'>全部订单</text>
+<view class='function clearfix' wx:for="{{meList}}">
+  <block wx:key='index'>
+      <view class='title'>{{item.title}}</view>
+      <view class='number'>订单编号：{{item.number}}</view>
+      <view class='price fr'>￥{{item.price}}</view>
+      <view class='clearfix button'>
+        <button class='fl cancel'>取消订单</button>
+        <button class='fr confirm'>待确认</button>
+      </view>
+  </block>
+</view>

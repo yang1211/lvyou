@@ -1,0 +1,40 @@
+<!--index.wxml--> 
+<view class='search'>
+  <input type='text' placeholder='搜索旅游产品'></input>
+  <image class="" src='/common/images/003.png' bindtap='query'></image>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" autoplay='true' circular='true'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="400" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='function width{{fristList.length}}'>
+  <block wx:for="{{fristList}}">
+    <view class='function_item' bindtap='goPage' data-url='{{item.bindtap}}'>
+      <image class='image' src='{{item.imageSrc}}'></image>
+      <view class='title'>{{item.title}}</view>
+    </view>
+  </block>
+</view>
+<image class='rexiao' src='../../common/images/50737.png'></image>
+<view class='index-news'>
+  <block wx:for="{{pro}}">
+    <navigator url='{{item.bindtap}}'>
+      <view class='clearfix proList'>
+        <view class='new-img'>
+          <image src='{{item.imageSrc}}'></image>
+        </view>
+        <view class='new-word'>
+          <text class='title'>{{item.title}}</text>
+          <text class='dec'>{{item.dec}}</text> 
+          <text class='price'>{{item.price}}</text> 
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>
+<view bindtap='tel'>
+  <image class='tel' mode='aspectFit' src='/common/images/003.png'></image>
+</view>

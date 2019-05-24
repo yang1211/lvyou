@@ -1,0 +1,55 @@
+.me{
+  width:100%;
+  padding-top: 15px;
+  background-image:url("http://test.lv-e.com/jiaying/aaa/170504.png");
+  height:150px;
+  border-bottom: 1px solid #eee;
+}
+.clearfix:after{
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+.new-img{
+  width: 30%;
+  height: 200rpx;
+  float: left;
+}
+.me .new-img image{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  margin-left:30px;
+} 
+.new-word{
+  float: left;
+  width: 67%;
+  margin-top:8px;
+}
+.dec{
+  font-size: 16px;
+}
+.title{
+  display:block;
+  font-size: 16px;
+}
+.proList{
+  margin-bottom: 20rpx;
+}
+.order{
+  padding:0 10px;
+  display:flex;
+}
+.order image{
+  width: 20px;
+  height: 20px;
+}
+.orderImgOne{
+  margin-right: 5px;
+}
+.metitle{
+  line-height:20px;
+  width:90%;
+}

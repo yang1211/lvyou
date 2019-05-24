@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<text class='whole'>营业部信息</text>
+<view class="about">
+ <block wx:for="{{about}}">
+  <text >{{item.conpany}}</text>
+  <text>联系电话：{{item.phone}}</text>
+  <text>联系地址：{{item.address}}</text>
+  </block>
+</view>
+<text class='whole brief'>公司简介</text>
+<view class='briefDec'>
+  <block wx:for="{{brief}}">
+    <image src='{{item.image}}'></image>
+    <text>{{item.text}}</text>
+  </block>
+</view>

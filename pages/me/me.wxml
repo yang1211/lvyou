@@ -1,0 +1,22 @@
+<view class='me'>
+  <block wx:for="{{me}}">
+    <navigator url='{{item.bindtap}}'>
+      <view class='clearfix proList'>
+        <view class='new-img'>
+          <image src='{{item.imageSrc}}'></image>
+        </view>
+        <view class='new-word'>
+          <text class='title'>ID：{{item.title}}</text>
+          <text class='dec'>{{item.name}}</text>
+        </view>
+      </view>
+    </navigator>
+  </block>
+  <view class='meOrder'>
+    <navigator url='meList/meList' class='order'>
+      <image src='../../common/images/normal_my.png' class='orderImgOne' width="10%"></image>
+      <text class='metitle'>我的订单</text>
+      <image class='fr' src='../../common/images/normal_my.png' width="10%"></image>
+    </navigator>
+  </view>
+</view> 

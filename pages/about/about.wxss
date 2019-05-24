@@ -1,0 +1,35 @@
+.whole{
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  height: 46px;
+  line-height: 46px;
+}
+.about text{
+  display: block;
+  font-size: 14px;
+  margin:10px;
+}
+.brief{
+  margin: 25px 0;
+}
+.briefDec{
+  margin: auto;
+  text-align: center;
+}
+.briefDec image{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  height: 170px;
+  border-radius: 20px;
+}
+.briefDec text{
+  display: block;
+  text-indent: 20px;
+  text-align: left;
+  font-size: 14px;
+  margin: 20px 10px;  
+}

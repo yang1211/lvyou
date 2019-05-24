@@ -1,0 +1,82 @@
+ <view class='search'>
+  <input type='text' placeholder='搜索旅游产品'></input>
+  <image class="" src='/common/images/003.png' bindtap='query'></image>
+</view>
+
+<view class='containerr'>
+<view class="youhui">
+  <view class="{{_num==0?'active':''}}" data-index='0' bindtap='toggle'>
+    出境
+  </view>
+  <view class="{{_num==1?'active':''}}" data-index='1' bindtap='toggle'>
+    国内
+  </view>
+  <view class="{{_num==2?'active':''}}" data-index='2' bindtap='toggle'>
+    港澳
+  </view>
+  <view class="{{_num==3?'active':''}}" data-index='3' bindtap='toggle'>
+    省内
+  </view>
+  <view class="{{_num==4?'active':''}}" data-index='4' bindtap='toggle'>
+    游轮
+  </view>
+</view>
+
+<swiper current="{{_num}}" class="swiper swiper-box" duration="200" bindchange="bindChange">
+  <!-- 出境 -->
+  <swiper-item>
+    <view class="yohui_article">
+      <view wx:for="{{firstList}}" class='recordItem' bindtap='goPage' data-url='{{item.bindtap}}'>
+        <image class='image' src='{{item.imageSrc}}'></image>
+        <view class='leave'>{{item.leave}}</view>
+        <view class='price'>{{item.price}}</view>
+        <view class='name'>{{item.title}}</view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 国内 -->
+  <swiper-item>
+    <view class="yohui_article youhui_article1">
+      <view wx:for="{{secondList}}" class='recordItem' bindtap='goPage'  data-url='{{item.bindtap}}'>
+        <image class='image' src='{{item.imageSrc}}'></image>
+        <view class='leave'>{{item.leave}}</view>
+        <view class='price'>{{item.price}}</view>
+        <view class='name'>{{item.title}}</view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 港澳 -->
+  <swiper-item>
+    <view class="yohui_article youhui_article2">
+       <view wx:for="{{three}}" class='recordItem' bindtap='goPage'  data-url='{{item.bindtap}}'>
+       <image class='image' src='{{item.imageSrc}}'></image>
+       <view class='leave'>{{item.leave}}</view>
+        <view class='price'>{{item.price}}</view>
+        <view class='name'>{{item.title}}</view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 省内 -->
+  <swiper-item>
+    <view class="yohui_article youhui_article3">
+       <view wx:for="{{four}}" class='recordItem' bindtap='goPage'  data-url='{{item.bindtap}}'>
+       <image class='image' src='{{item.imageSrc}}'></image>
+       <view class='leave'>{{item.leave}}</view>
+        <view class='price'>{{item.price}}</view>
+        <view class='name'>{{item.title}}</view>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 游轮 -->
+  <swiper-item>
+    <view class="yohui_article youhui_article4">
+      <view wx:for="{{five}}" class='recordItem'  bindtap='goPage' data-url='{{item.bindtap}}'>
+       <image class='image' src='{{item.imageSrc}}'></image>
+       <view class='leave'>{{item.leave}}</view>
+        <view class='price'>{{item.price}}</view>
+        <view class='name'>{{item.title}}</view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+</view>

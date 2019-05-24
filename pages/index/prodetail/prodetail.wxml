@@ -1,0 +1,49 @@
+<!--pages/prodetail/prodetail.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true" autoplay='true' circular='true'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" width="355" height="400" />
+    </swiper-item>
+    <view class='tuanhao'>团号：{{item.number}}</view>
+  </block>
+</swiper>
+
+<view class='titleDec' wx:for="{{titleDec}}">
+  <text class='title'>{{item.title}}</text>
+  <text class='place'>￥{{item.moeny}}</text>
+  <text class='out'>{{item.out}}</text>
+</view>
+<view class='line'></view>
+
+<view class='clearfix'>
+  <view class='group-title'>团期/价格</view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:50px;" bindchange="bindChange">
+    <swiper-item wx:for="{{group}}" bindtap='goIndex' class="swiper-item {{index==idx?'_left':'left'}}" data-index="{{index}}">
+      <text class='time'>{{item.time}}</text>
+      <text class='money'>￥{{item.moeny}}</text>
+    </swiper-item>
+  </swiper>
+  <view class='plan'>计划：{{}}人/空位：{{}}人</view>
+  <view class='line'></view>
+</view>
+
+<view wx:for='{{chara}}'>
+  <text class='characteristic'>产品特色</text>
+  <text class='charaDec'>{{item.dec}}</text>
+  <view class='line'></view>
+</view>
+
+<view wx:for='{{con}}'>
+  <view class='FirstDay'>
+    <text class='day'>{{item.day}}</text>
+    <text class='content'>{{item.content}}</text>
+    <view class='line'></view>
+  </view>
+</view>
+<view class='height'></view>
+
+<view class='footer clearfix'>
+  <image src='../../../common/images/normal_my.png' bindtap='bindViewTab'></image>
+  <image bindtap='tel' src='../../../common/images/normal_my.png'></image>
+  <view bindtap='tel' class=' now'>立即预定</view>
+</view>

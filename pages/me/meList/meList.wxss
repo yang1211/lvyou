@@ -1,0 +1,50 @@
+/* pages/me/meList/meList.wxss */
+page{
+  font-size: 14px;
+}
+.function{
+  padding: 15px;
+  border-bottom: 3px solid #eee;
+}
+.whole{
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  height: 26px;
+  line-height: 26px;
+}
+.title{
+  font-weight: 600;
+  font-size: 15px;
+}
+.number{
+  margin-top: 15px;
+  color: #666;
+}
+.price{
+  color: red;
+  margin-top:12px;
+  font-weight: 600;
+}
+.button{
+  margin-top: 40px;
+}
+.cancel{
+  background-color: #fff;
+  height: 25px;
+  line-height: 25px;
+  color: #666;
+  font-size: 14px;
+  border-radius: 12px;
+  width: 95px;
+}
+.confirm{
+  background-color: #666;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 12px;
+  width: 95px;
+}
